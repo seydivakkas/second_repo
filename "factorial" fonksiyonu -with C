@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+
+/*
+kullanıcıdan bir sayı girmesini ister 
+ve factorial fonksiyonunu çağırarak girilen sayının faktöriyelini hesaplar. 
+factorial fonksiyonu, özyinemeli bir yapıya sahiptir. Eğer girilen sayı 0 ise,
+1 değerini döndürerek faktöriyel hesaplamasını sonlandırır. Eğer girilen sayı 0 değilse, 
+sayıyı azaltarak (n-1) faktöriyelini özyinemeli olarak çağırır 
+ve sonucu girilen sayı ile çarparak hesaplama yapar. 
+main işlevi, faktöriyel hesaplamasını ekrana yazdırırken gerekli kontrolleri yapar.
+*/
+
+
+
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int number;
+
+    printf("Bir sayi girin: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("Negatif sayilarin faktoriyeli hesaplanamaz.\n");
+    } else {
+        int result = factorial(number);
+        printf("%d sayisinin faktoriyeli: %d\n", number, result);
+    }
+
+    return 0;
+}
