@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+
+/*
+Kodumuz "double" veri türünden bir "number" değişkeni tanımlanır 
+ve kullanıcıdan ondalık bir sayı girmesi istenir. 
+Girilen sayı "scanf" fonksiyonu ile "number" değişkenine okunur. 
+Ardından, printf fonksiyonu kullanılarak number değişkeni onaltılık (hexadecimal) biçimde ekrana yazdırılır. 
+%a format belirteci, ondalık sayıyı onaltılık (hexadecimal) biçimde gösterir.
+
+Bu programı derledikten sonra çalıştırarak, kullanıcıdan ondalık bir sayı girmesini isteyebilir
+ve programın girilen sayıyı onaltılık (hexadecimal) biçimde ekrana yazdırmasını sağlayabilirsiniz.
+*/
+
+
+
+int main() {
+    double number;
+
+    printf("Bir ondalik sayi girin: ");
+    scanf("%lf", &number);
+
+    printf("Onaltılık (hexadecimal) olarak: %a\n", number);
+
+    return 0;
+}
