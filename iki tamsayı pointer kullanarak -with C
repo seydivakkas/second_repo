@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+/*
+Bu program, num1 ve num2 adında iki tam sayı değişkeni oluşturur. 
+Daha sonra ptr1 ve ptr2 adında iki işaretçi (pointer) değişkeni oluşturur.
+İşaretçiler, num1 ve num2 değişkenlerinin adreslerini gösterir.
+Daha sonra, işaretçileri kullanarak ptr1 üzerinden num1 değişkenine 
+ve ptr2 üzerinden num2 değişkenine değer atanır. 
+İşaretçilerin gösterdiği adreslere, "*" operatörü ile erişilerek değer atama yapılır.
+Son olarak, printf fonksiyonu kullanılarak 
+işaretçilerin gösterdiği değerler ekrana yazdırılır.
+*/
+
+
+
+
+int main() {
+    int num1, num2;
+    int *ptr1, *ptr2;
+    
+    ptr1 = &num1; // ptr1, num1'in adresini gösteriyor
+    ptr2 = &num2; // ptr2, num2'nin adresini gösteriyor
+    
+    // Değer atama
+    *ptr1 = 10;
+    *ptr2 = 20;
+    
+    // Değerleri ekrana yazdırma
+    printf("num1: %d\n", *ptr1);
+    printf("num2: %d\n", *ptr2);
+    
+    return 0;
+}
