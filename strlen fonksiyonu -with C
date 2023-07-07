@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+
+# Kullanıcıdan bir kelime veya cümle girmesini isteyen ve girilen metnin uzunluğunu strlen fonksiyonunu kullanarak ekrana yazdıran bir C kodu
+
+
+
+int main() {
+    char text[100];
+
+    printf("Bir kelime veya cumle girin: ");
+    fgets(text, sizeof(text), stdin);
+
+    // Son satırda otomatik olarak eklenen new line karakterini kaldırma
+    if (text[strlen(text) - 1] == '\n') {
+        text[strlen(text) - 1] = '\0';
+    }
+
+    int length = strlen(text);
+    printf("Girilen metnin uzunlugu: %d\n", length);
+
+    return 0;
+}
